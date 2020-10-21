@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="cordova.js"></script>
+</head>
+
+<body>
+
+    <script>
+        document.addEventListener("deviceready", onDeviceReady, false);
+        function onDeviceReady() {
+            let page = cordova.InAppBrowser.open('http://192.168.0.104/ca', '_self', 'location=no');
+            page.addEventListener('customscheme', onCustomscheme);
+            function onCustomscheme(event){
+                console.log (event);
+                alert(event.url);
+                    
+            }
+        }
+    </script>
+
+</body>
+
+</html>
