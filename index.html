@@ -13,7 +13,7 @@
     <script>
         document.addEventListener("deviceready", onDeviceReady, false);
         function onDeviceReady() {
-            let page = cordova.InAppBrowser.open('http://192.168.0.104/ca', '_self', 'location=no');
+            let page = cordova.InAppBrowser.open('http://clasificadosaguadas.com/ca', '_self', 'location=no');
             page.addEventListener('customscheme', onCustomscheme);
             function onCustomscheme(event){
                 console.log (event);
